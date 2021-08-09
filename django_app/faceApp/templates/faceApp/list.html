@@ -1,0 +1,17 @@
+<h3>To Do</h3>
+
+<form>
+    {{form.title}}
+    <input type="submit" name="CreateTask"/>
+</form>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="run_script"> Run script </button>
+</form>
+
+{% for task in tasks %}
+    <div>
+        <p>{{task}}</p>
+    </div>
+{% endfor %}
