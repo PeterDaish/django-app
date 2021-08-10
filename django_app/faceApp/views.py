@@ -26,7 +26,7 @@ def index(request):
         #image = Image.open('/FastAgingGAN/images/TomCruise01.jpg')
         print("opened image")
         #call function to run.
-        pdb.set_trace() 
+        #pdb.set_trace() 
 
         aged_image=predict(image)
         print("inferenced image")
@@ -65,7 +65,7 @@ def index(request):
         #image = Image.open('/FastAgingGAN/images/TomCruise01.jpg')
         print("opened image")
         #call function to run.
-        pdb.set_trace() 
+        #pdb.set_trace() 
 
         aged_image=predict(image)
         print("inferenced image")
@@ -104,7 +104,7 @@ def index(request):
         #image = Image.open('/FastAgingGAN/images/TomCruise01.jpg')
         print("opened image")
         #call function to run.
-        pdb.set_trace() 
+        #pdb.set_trace() 
 
         aged_image=predict(image)
         print("inferenced image")
@@ -138,7 +138,7 @@ def index(request):
 
 
     if request.method=='POST':
-        pdb.set_trace()
+        #pdb.set_trace()
         inImg = request.FILES["filename"]
         inImg = Image.open(inImg)
         
