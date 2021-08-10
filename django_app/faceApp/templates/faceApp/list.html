@@ -1,17 +1,52 @@
-<h3>To Do</h3>
 
-<form>
-    {{form.title}}
-    <input type="submit" name="CreateTask"/>
+<center><h3>Welcome to the FaceAgingGAN DeepFake application!</h3>
+<p> This application has been implemented by the Lead Researcher for the research project
+    and is based on work created by HasnainRaz, titled Fast-AgingGAN.
+</p>
+</center>
+
+
+<form method="post">
+    {% csrf_token %}
+    <center>
+    <button type="submit" name="run_script_default_celebA"> <p>Run script With Default Celeb A</p>
+        <img src ="https://www.apzomedia.com/wp-content/uploads/2020/03/Tom-Cruise-Net-Worth-e1585322225367.jpg" height="256" width="256"/>
+    </button></center>
 </form>
 
 <form method="post">
     {% csrf_token %}
-    <button type="submit" name="run_script"> Run script </button>
+    <center>
+    <button type="submit" name="run_script_default_celebC"> <p>Run script With Default Celeb C</p>
+        <img src ="https://th.bing.com/th/id/OIP.Of6nTk2iTm5okVEWM5YR-gHaI5?pid=ImgDet&rs=1" height="256" width="256"/>
+    </button></center>
 </form>
 
-{% for task in tasks %}
-    <div>
-        <p>{{task}}</p>
-    </div>
-{% endfor %}
+<form method="post">
+    {% csrf_token %}
+    <center>
+    <button type="submit" name="run_script_default_celebB"> <p>Run script With Default Celeb B</p>
+        <img src ="https://th.bing.com/th/id/OIP.5sD893_i6DkMEJwBalTsZgHaHa?pid=ImgDet&rs=1" height="256" width="256"/>
+    </button></center>
+</form>
+
+<div>
+    <br>
+    <center>
+    <h4> Try making your own DeepFake!</h4>
+
+    <p>
+        Please give making your own DeepFake a go by uploading your own image.
+        To upload your own image, please take a photo of your face on your webcam, locate the file and then click the upload button.
+        Alternatively, please take a selfie on your mobile phone and transfer it to your PC desktop and locate the file for upload.
+    </p>
+    </center>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <center>
+        <input type="file" id="myFile" name="filename">
+        <input type="submit" value="Run Your Own DeepFake">
+        </center>
+    </form>
+</div>
+
